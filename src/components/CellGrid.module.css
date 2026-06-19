@@ -1,0 +1,131 @@
+.gridWrap {
+  flex: 1;
+  overflow: auto;
+  background: var(--bg);
+  animation: fadeIn 0.5s ease both;
+}
+
+.table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: max-content;
+  min-width: 100%;
+}
+
+/* ── Headers ── */
+.cornerCell {
+  width: var(--header-w);
+  min-width: var(--header-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border2);
+  border-bottom: 1px solid var(--border2);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.colHeader {
+  width: var(--col-w);
+  min-width: var(--col-w);
+  height: var(--cell-h);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border2);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text2);
+  text-align: center;
+  letter-spacing: 0.08em;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  transition: color 0.15s;
+  user-select: none;
+}
+.colHeader:hover { color: var(--accent2); }
+
+.rowHeader {
+  width: var(--header-w);
+  min-width: var(--header-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border2);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  text-align: center;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  user-select: none;
+}
+
+/* ── Cells ── */
+.cell {
+  height: var(--cell-h);
+  min-width: var(--col-w);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+  cursor: cell;
+  position: relative;
+  transition: background 0.1s;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cell:hover { background: rgba(255,255,255,0.02); }
+
+.cell.selected {
+  background: rgba(108,99,255,0.1) !important;
+  box-shadow: inset 0 0 0 1.5px var(--accent);
+  z-index: 1;
+}
+.cell.editing {
+  background: rgba(108,99,255,0.08) !important;
+  box-shadow: inset 0 0 0 2px var(--accent2);
+  z-index: 2;
+  overflow: visible;
+}
+.cell.hasFormula { color: var(--green); }
+.cell.error      { color: var(--red); background: rgba(248,113,113,0.06); }
+.cell.circular   {
+  color: var(--red);
+  background: rgba(248,113,113,0.1);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.cellValue {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: var(--cell-h);
+}
+
+.cellInput {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent2);
+  caret-color: var(--accent2);
+  padding: 0;
+}
+
+.formulaDot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--green);
+  opacity: 0.6;
+}

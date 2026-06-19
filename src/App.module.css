@@ -1,0 +1,122 @@
+/* ── App Shell ── */
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* ── Splash Screen ── */
+.splash {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.splashContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+.splashLogo {
+  font-size: 56px;
+  color: var(--accent2);
+  animation: glow 3s ease-in-out infinite;
+  line-height: 1;
+}
+
+.splashTitle {
+  font-family: var(--display);
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.splashSub {
+  font-size: 15px;
+  color: var(--text2);
+  font-family: var(--sans);
+  font-weight: 300;
+  max-width: 380px;
+}
+
+.splashFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 420px;
+}
+
+.splashTag {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent2);
+  background: rgba(108,99,255,0.1);
+  border: 1px solid rgba(108,99,255,0.25);
+  border-radius: 20px;
+  padding: 4px 12px;
+  animation: fadeSlideUp 0.5s ease both;
+}
+
+.splashBtn {
+  margin-top: 8px;
+  padding: 14px 36px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius2);
+  color: #fff;
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 32px rgba(108,99,255,0.4);
+  letter-spacing: -0.01em;
+}
+.splashBtn:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(108,99,255,0.5);
+}
+.splashBtn:active { transform: translateY(0); }
+
+.splashCredit {
+  font-size: 11px;
+  color: var(--text3);
+  font-family: var(--mono);
+}
+
+/* ── Background Grid ── */
+.splashGrid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 1px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.splashCell {
+  background: transparent;
+  border: 1px solid var(--border);
+  animation: pulse 3s ease-in-out infinite;
+  border-radius: 0;
+}
+.splashCell:nth-child(3n)  { background: rgba(108,99,255,0.04); }
+.splashCell:nth-child(7n)  { background: rgba(34,211,160,0.03); }
+.splashCell:nth-child(13n) { background: rgba(167,139,250,0.03); }

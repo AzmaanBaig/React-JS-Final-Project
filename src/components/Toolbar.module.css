@@ -1,0 +1,151 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  height: 52px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  animation: fadeSlideUp 0.4s ease both;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 12px;
+}
+.logo {
+  font-size: 20px;
+  color: var(--accent2);
+  line-height: 1;
+}
+.brandText {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.badge {
+  font-family: var(--mono);
+  font-size: 9px;
+  background: var(--surface2);
+  color: var(--text3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text2);
+  font-family: var(--sans);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn:hover {
+  background: rgba(108,99,255,0.12);
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108,99,255,0.2);
+}
+.btn:active { transform: translateY(0); }
+
+.btnIcon {
+  font-size: 13px;
+  line-height: 1;
+}
+.btnLabel { font-weight: 500; }
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text3);
+  font-family: var(--mono);
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ── Theme Toggle ── */
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+}
+.themeToggle:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: 2px;
+}
+
+.toggleTrack {
+  position: relative;
+  width: 52px;
+  height: 26px;
+  border-radius: 99px;
+  border: 1.5px solid var(--border2);
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.toggleTrack.dark {
+  background: var(--surface2);
+}
+.toggleTrack.light {
+  background: #e8e4ff;
+  border-color: var(--accent2);
+}
+
+.toggleThumb {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  background: var(--surface);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+  transform: translateX(0px);
+}
+.toggleTrack.light .toggleThumb {
+  transform: translateX(26px);
+  background: #fff;
+}
