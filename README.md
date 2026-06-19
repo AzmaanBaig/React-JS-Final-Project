@@ -1,4 +1,4 @@
-# GridCalc — Spreadsheet Multi-Cell Calculation Processor
+#  📊  GridCalc — Spreadsheet Multi-Cell Calculation Processor
 
 **B.Tech CSE 2025–29 · React JS Case Study · Semester II · ITM Skills University**
 
@@ -6,7 +6,51 @@
 
 ## Overview
 
-A **frontend-only** React application that implements a fully functional spreadsheet engine in the browser — no backend, no database. All computation happens client-side using a custom-built formula parser, DAG dependency resolver, and cycle detection engine.
+A modern spreadsheet-like web application built using React and Vite.  
+GridCalc allows users to input, calculate, and manage structured data efficiently with a clean UI.
+
+---
+
+## 🌐 Live Demo
+
+👉 https://starlit-halva-11a54c.netlify.app/
+
+---
+
+## 📸 Screenshots
+
+### Home Screen
+<img width="1710" height="1018" alt="Screenshot 2026-06-08 at 3 32 40 PM" src="https://github.com/user-attachments/assets/54811037-aa6c-475c-9926-6f9d0d1be258" />
+
+
+### Spreadsheet Interface
+
+<img width="1708" height="1029" alt="Screenshot 2026-06-08 at 3 32 52 PM" src="https://github.com/user-attachments/assets/f0fd0351-8b99-4743-9f83-ad91ce38140e" />
+
+
+<img width="1710" height="1013" alt="Screenshot 2026-06-08 at 3 32 59 PM" src="https://github.com/user-attachments/assets/b5ae1234-7b52-4d70-9e97-c8ef622b5ac4" />
+
+
+---
+
+## ⚙️ Tech Stack
+
+- React.js
+- Vite
+- JavaScript (ES6+)
+- CSS3
+- Netlify (Deployment)
+
+---
+
+## ✨ Features
+
+- 📊 Spreadsheet-style grid UI
+- ➕ Add / edit / update cells
+- ⚡ Fast rendering with Vite
+- 💾 Persistent state handling
+- 📱 Responsive design
+- 🎯 Clean modern UI
 
 ---
 
